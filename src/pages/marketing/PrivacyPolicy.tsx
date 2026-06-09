@@ -23,9 +23,10 @@ export const PrivacyPolicy: React.FC = () => {
               {/* Introduction */}
               <div className="mb-12 p-6 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-xl border border-purple-400/20">
                 <p className="text-gray-300 leading-relaxed">
-                  At Pathfinity.ai, we are committed to protecting your privacy and ensuring the security of your personal information. 
-                  This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our 
-                  website or use our AI-powered educational platform.
+                  At PathCTE, we are committed to protecting your privacy and ensuring the security of your personal information.
+                  This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our
+                  website or use our career-technical education platform. PathCTE is part of the Pathfinity suite, a product
+                  of Esposure, Inc.
                 </p>
               </div>
 
@@ -55,7 +56,7 @@ export const PrivacyPolicy: React.FC = () => {
                       <h3 className="text-xl font-semibold text-white mb-3">Educational Data</h3>
                       <p className="text-gray-300 mb-4">Through our AI-powered platform, we collect:</p>
                       <ul className="list-disc list-inside text-gray-300 space-y-2 ml-4">
-                        <li>Learning interactions and responses across our three modes (Learn, Experience, Discover)</li>
+                        <li>Learning interactions and responses across career exploration, certifications, and progression</li>
                         <li>Assessment results and performance analytics</li>
                         <li>Time spent on activities and learning patterns</li>
                         <li>AI-generated insights and personalized recommendations</li>
@@ -85,7 +86,7 @@ export const PrivacyPolicy: React.FC = () => {
                   <p className="text-gray-300 mb-4">We use the information we collect for the following purposes:</p>
                   <ul className="list-disc list-inside text-gray-300 space-y-2 ml-4">
                     <li>To provide and improve our AI-powered educational services</li>
-                    <li>To personalize learning experiences across Learn, Experience, and Discover modes</li>
+                    <li>To personalize career exploration, certification prep, and progression</li>
                     <li>To generate adaptive assessments and track learning progress</li>
                     <li>To communicate with you about your account and platform updates</li>
                     <li>To provide customer support and respond to your inquiries</li>
@@ -228,14 +229,14 @@ export const PrivacyPolicy: React.FC = () => {
                   <div className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-xl p-6 border border-purple-400/20">
                     <div className="space-y-4">
                       <div>
-                        <h3 className="text-white font-semibold mb-2">Pathfinity.ai</h3>
-                        <p className="text-gray-300">AI-Powered Educational Platform</p>
+                        <h3 className="text-white font-semibold mb-2">PathCTE</h3>
+                        <p className="text-gray-300">Career-technical education · part of the Pathfinity suite</p>
                         <p className="text-gray-300">Powered by Esposure, Inc.</p>
                       </div>
-                      
+
                       <div>
                         <p className="text-gray-300"><strong className="text-white">Email:</strong> info@pathfinity.ai</p>
-                        <p className="text-gray-300"><strong className="text-white">Website:</strong> pathfinity.ai</p>
+                        <p className="text-gray-300"><strong className="text-white">Website:</strong> pathcte.com</p>
                         <p className="text-gray-300"><strong className="text-white">Contact Form:</strong> <a href="/contact" className="text-purple-400 hover:text-purple-300 transition-colors">Contact Us</a></p>
                       </div>
                     </div>
@@ -245,8 +246,8 @@ export const PrivacyPolicy: React.FC = () => {
                 {/* Footer */}
                 <div className="text-center pt-8 border-t border-white/20">
                   <p className="text-gray-400 text-sm italic">
-                    This Privacy Policy is effective as of the date listed above and applies to all information 
-                    collected by Pathfinity.ai through our website and platform services.
+                    This Privacy Policy is effective as of the date listed above and applies to all information
+                    collected by PathCTE through our website and platform services.
                   </p>
                 </div>
 
