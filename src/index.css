@@ -1,5 +1,6 @@
-/* Import MasterTheme for CSS variables */
-@import './styles/MasterTheme.css';
+/* Brand tokens — canonical shared design tokens (was: ./styles/MasterTheme.css).
+   Superset of the old MasterTheme.css + the themes/{light,dark}.css glass layer. */
+@import '@esposure/brand-tokens/css';
 
 /* Global width fix for dark theme issues - MUST come before Tailwind */
 @import './styles/global-width-fix.css';

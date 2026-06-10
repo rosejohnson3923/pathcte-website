@@ -54,6 +54,7 @@
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.56.0",
+    "@esposure/brand-tokens": "github:rosejohnson3923/esposure-brand-tokens",
     "@azure/communication-email": "^1.0.0",
     "@azure/identity": "^4.10.2",
     "@azure/keyvault-secrets": "^4.10.0",
