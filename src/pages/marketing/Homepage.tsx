@@ -66,7 +66,7 @@ const segments = [
 const FeatureRow: React.FC<{ f: typeof features[number]; flip: boolean }> = ({ f, flip }) => (
   <div id={f.id} className="scroll-mt-24 grid items-center gap-10 lg:grid-cols-2">
     <div className={flip ? 'lg:order-2' : ''}>
-      <div className="inline-flex items-center gap-2 rounded-full border border-violet-500/40 bg-violet-500/10 px-3 py-1 mb-4">
+      <div className="inline-flex items-center gap-2 rounded-full border border-violet-400/40 bg-violet-500/10 backdrop-blur-md px-3 py-1 mb-4">
         <f.icon className="w-4 h-4 text-violet-300" />
         <span className="text-xs font-semibold uppercase tracking-wide text-violet-200">{f.eyebrow}</span>
       </div>
@@ -74,7 +74,7 @@ const FeatureRow: React.FC<{ f: typeof features[number]; flip: boolean }> = ({ f
       <p className="text-gray-300 leading-relaxed">{f.body}</p>
     </div>
     <div className={flip ? 'lg:order-1' : ''}>
-      <div className="rounded-xl border border-gray-700 overflow-hidden shadow-2xl shadow-black/40 bg-gray-900">
+      <div className="rounded-xl glass-card overflow-hidden">
         <img src={f.img} alt={f.title} loading="lazy" className="w-full" />
       </div>
     </div>
@@ -85,8 +85,8 @@ export const Homepage: React.FC = () => {
   return (
     <MarketingLayout>
       {/* ---- Hero ---- */}
-      <section className="relative overflow-hidden bg-gray-950 py-20 sm:py-28">
-        <div className="absolute inset-0 bg-gradient-to-br from-violet-900/30 via-gray-950 to-indigo-900/20" />
+      <section className="relative overflow-hidden py-20 sm:py-28">
+        <div className="absolute inset-0 bg-gradient-to-br from-violet-900/20 via-transparent to-indigo-900/20" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="inline-flex items-center gap-2 rounded-full border border-violet-500/40 bg-violet-500/10 px-4 py-1.5 mb-8">
             <BrandMark className="w-5 h-5 rounded" title="PathCTE" />
@@ -112,11 +112,11 @@ export const Homepage: React.FC = () => {
 
           {/* ---- Hero centerpiece: PathCTE dashboard ---- */}
           <div className="max-w-5xl mx-auto">
-            <div className="rounded-xl border border-gray-700 overflow-hidden shadow-2xl shadow-black/40">
+            <div className="rounded-2xl glass-panel overflow-hidden p-2">
               <img
                 src="/Pathcte_Dashboard.webp"
                 alt="PathCTE student dashboard"
-                className="w-full"
+                className="w-full rounded-xl"
               />
             </div>
             <p className="mt-3 text-sm text-gray-400">
@@ -127,7 +127,7 @@ export const Homepage: React.FC = () => {
       </section>
 
       {/* ---- The journey (anchored feature rows) ---- */}
-      <section className="bg-gray-900 py-20">
+      <section className="py-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
             <h2 className="text-3xl font-bold text-white mb-3">Explore → Certify → Build a portfolio</h2>
@@ -144,16 +144,16 @@ export const Homepage: React.FC = () => {
       </section>
 
       {/* ---- Tournaments + rewards (no dedicated screenshot) ---- */}
-      <section className="bg-gray-950 py-16 border-y border-gray-800/60">
+      <section className="py-16 border-y border-white/5">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 grid gap-6 sm:grid-cols-2">
-          <div className="rounded-xl border border-gray-800 bg-gray-900 p-7">
+          <div className="rounded-xl glass-card p-7">
             <Trophy className="w-8 h-8 text-violet-400 mb-4" />
             <h3 className="text-lg font-bold text-white mb-2">Tournaments</h3>
             <p className="text-gray-400 text-sm leading-relaxed">
               Compete solo or multiplayer — career mastery becomes something students want to come back to.
             </p>
           </div>
-          <div className="rounded-xl border border-gray-800 bg-gray-900 p-7">
+          <div className="rounded-xl glass-card p-7">
             <Sparkles className="w-8 h-8 text-violet-400 mb-4" />
             <h3 className="text-lg font-bold text-white mb-2">Rewards & XP</h3>
             <p className="text-gray-400 text-sm leading-relaxed">
@@ -164,7 +164,7 @@ export const Homepage: React.FC = () => {
       </section>
 
       {/* ---- Better together: Pathfinity foundation ---- */}
-      <section className="bg-gray-900 py-20">
+      <section className="py-20">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <LayoutGrid className="w-8 h-8 text-violet-400 mx-auto mb-4" />
           <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">Better with Pathfinity</h2>
@@ -186,12 +186,12 @@ export const Homepage: React.FC = () => {
       </section>
 
       {/* ---- Buyer segments ---- */}
-      <section className="bg-gray-950 py-20">
+      <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Built for how you buy</h2>
           <div className="grid gap-6 md:grid-cols-3">
             {segments.map((s) => (
-              <Link key={s.title} to={s.to} className="group rounded-xl border border-gray-800 bg-gray-900 p-7 hover:border-violet-600 transition-colors">
+              <Link key={s.title} to={s.to} className="group rounded-xl glass-card glass-card-hover p-7">
                 <s.icon className="w-8 h-8 text-violet-400 mb-4" />
                 <h3 className="text-lg font-bold text-white mb-2 flex items-center gap-2">
                   {s.title}

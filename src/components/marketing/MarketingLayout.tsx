@@ -57,9 +57,9 @@ export const MarketingLayout: React.FC<MarketingLayoutProps> = ({ children }) =>
   }, [location]);
 
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900">
+    <div className="min-h-screen pathcte-ambient text-gray-100">
       {/* Sticky Header */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 shadow-sm">
+      <header className="fixed top-0 left-0 right-0 z-50 glass-nav">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
@@ -83,7 +83,7 @@ export const MarketingLayout: React.FC<MarketingLayoutProps> = ({ children }) =>
                 </button>
 
                 {isAudienceDropdownOpen && (
-                  <div className="absolute top-full left-0 mt-1 w-64 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-600 py-2 z-50">
+                  <div className="absolute top-full left-0 mt-1 w-64 glass-card rounded-lg py-2 z-50">
                     <div className="px-4 pt-1 pb-1 text-xs font-semibold uppercase tracking-wide text-gray-400">PathCTE</div>
                     <Link to="/#explore" className="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-purple-50 dark:hover:bg-purple-900/20 hover:text-purple-600 dark:hover:text-purple-400" onClick={() => setIsAudienceDropdownOpen(false)}>Career Exploration</Link>
                     <Link to="/#certquest" className="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-purple-50 dark:hover:bg-purple-900/20 hover:text-purple-600 dark:hover:text-purple-400" onClick={() => setIsAudienceDropdownOpen(false)}>Cert Quest</Link>
@@ -139,7 +139,7 @@ export const MarketingLayout: React.FC<MarketingLayoutProps> = ({ children }) =>
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
+          <div className="md:hidden glass-nav border-t border-white/10">
             <div className="px-4 py-3 space-y-3">
               <div className="pt-1 text-xs font-semibold uppercase tracking-wide text-gray-400">PathCTE</div>
               <Link to="/#explore" className="block text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 font-medium" onClick={() => setIsMobileMenuOpen(false)}>Career Exploration</Link>
@@ -191,7 +191,7 @@ export const MarketingLayout: React.FC<MarketingLayoutProps> = ({ children }) =>
       <main className="pt-16">{children}</main>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white">
+      <footer className="bg-gray-950/60 backdrop-blur-xl border-t border-white/10 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {/* Brand */}

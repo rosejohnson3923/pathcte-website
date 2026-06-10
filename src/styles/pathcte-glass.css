@@ -1,0 +1,84 @@
+/**
+ * PathCTE marketing — signature glassmorphism
+ * ===========================================
+ * Echoes the PathCTE *app's* dark frosted-glass look (tiered backdrop-blur,
+ * translucent surfaces, saturate, soft diffuse shadows) to differentiate
+ * pathcte.com from the crisp pathfinity.ai shell. The site is dark-first, so
+ * these are authored for the dark context.
+ *
+ * Pattern: an ambient violet→teal gradient field behind everything (so glass
+ * has something to refract), with frosted surfaces (.glass-nav/.glass-card/
+ * .glass-panel/.glass-badge) floating on top.
+ */
+
+/* ---- Ambient field: deep base + violet/teal radial glows (fixed, behind all) ---- */
+.pathcte-ambient {
+  position: relative;
+  background-color: #070a12;
+}
+.pathcte-ambient::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(60rem 34rem at 12% -6%, rgba(139, 92, 246, 0.22), transparent 60%),
+    radial-gradient(52rem 36rem at 100% 6%, rgba(20, 184, 166, 0.16), transparent 55%),
+    radial-gradient(48rem 34rem at 50% 116%, rgba(99, 102, 241, 0.18), transparent 60%);
+}
+/* keep real content above the ambient layer */
+.pathcte-ambient > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ---- Frosted nav (dark) ---- */
+.glass-nav {
+  background: rgba(10, 13, 22, 0.55);
+  -webkit-backdrop-filter: blur(18px) saturate(180%);
+  backdrop-filter: blur(18px) saturate(180%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* ---- Frosted card (base tier) ---- */
+.glass-card {
+  background: rgba(255, 255, 255, 0.04);
+  -webkit-backdrop-filter: blur(16px) saturate(160%);
+  backdrop-filter: blur(16px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+}
+/* hover lift for interactive cards */
+.glass-card-hover {
+  transition: border-color 200ms ease, background-color 200ms ease, transform 200ms ease;
+}
+.glass-card-hover:hover {
+  border-color: rgba(167, 139, 250, 0.55); /* violet-400 */
+  background: rgba(255, 255, 255, 0.06);
+}
+
+/* ---- Elevated panel (hero centerpiece frame) ---- */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.05);
+  -webkit-backdrop-filter: blur(20px) saturate(170%);
+  backdrop-filter: blur(20px) saturate(170%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.45), inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+}
+
+/* ---- Glass badge / pill (icon chips, eyebrows) ---- */
+.glass-badge {
+  background: rgba(255, 255, 255, 0.06);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* Graceful fallback: if backdrop-filter is unsupported, lean on opaque-ish bg */
+@supports not ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+  .glass-nav   { background: rgba(13, 17, 28, 0.92); }
+  .glass-card  { background: rgba(23, 27, 40, 0.92); }
+  .glass-panel { background: rgba(23, 27, 40, 0.94); }
+  .glass-badge { background: rgba(255, 255, 255, 0.10); }
+}

@@ -5,6 +5,9 @@
 /* Global width fix for dark theme issues - MUST come before Tailwind */
 @import './styles/global-width-fix.css';
 
+/* PathCTE marketing glassmorphism (signature dark frosted look) */
+@import './styles/pathcte-glass.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
