@@ -67,6 +67,17 @@
   box-shadow: 0 16px 48px rgba(0, 0, 0, 0.45), inset 0 0 0 1px rgba(255, 255, 255, 0.04);
 }
 
+/* ---- Frosted menu (dropdowns / mobile menu) ----
+   Floats OVER page content, so it must be near-opaque for legibility — unlike
+   .glass-card, which sits on the ambient field with little behind it. */
+.glass-menu {
+  background: rgba(17, 21, 34, 0.92);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.50);
+}
+
 /* ---- Glass badge / pill (icon chips, eyebrows) ---- */
 .glass-badge {
   background: rgba(255, 255, 255, 0.06);
@@ -80,5 +91,6 @@
   .glass-nav   { background: rgba(13, 17, 28, 0.92); }
   .glass-card  { background: rgba(23, 27, 40, 0.92); }
   .glass-panel { background: rgba(23, 27, 40, 0.94); }
+  .glass-menu  { background: rgba(17, 21, 34, 0.98); }
   .glass-badge { background: rgba(255, 255, 255, 0.10); }
 }

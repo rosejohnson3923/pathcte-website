@@ -83,7 +83,7 @@ export const MarketingLayout: React.FC<MarketingLayoutProps> = ({ children }) =>
                 </button>
 
                 {isAudienceDropdownOpen && (
-                  <div className="absolute top-full left-0 mt-1 w-64 glass-card rounded-lg py-2 z-50">
+                  <div className="absolute top-full left-0 mt-1 w-64 glass-menu rounded-lg py-2 z-50">
                     <div className="px-4 pt-1 pb-1 text-xs font-semibold uppercase tracking-wide text-gray-400">PathCTE</div>
                     <Link to="/#explore" className="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-purple-50 dark:hover:bg-purple-900/20 hover:text-purple-600 dark:hover:text-purple-400" onClick={() => setIsAudienceDropdownOpen(false)}>Career Exploration</Link>
                     <Link to="/#certquest" className="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-purple-50 dark:hover:bg-purple-900/20 hover:text-purple-600 dark:hover:text-purple-400" onClick={() => setIsAudienceDropdownOpen(false)}>Cert Quest</Link>
@@ -139,7 +139,7 @@ export const MarketingLayout: React.FC<MarketingLayoutProps> = ({ children }) =>
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden glass-nav border-t border-white/10">
+          <div className="md:hidden glass-menu border-t border-white/10">
             <div className="px-4 py-3 space-y-3">
               <div className="pt-1 text-xs font-semibold uppercase tracking-wide text-gray-400">PathCTE</div>
               <Link to="/#explore" className="block text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 font-medium" onClick={() => setIsMobileMenuOpen(false)}>Career Exploration</Link>
