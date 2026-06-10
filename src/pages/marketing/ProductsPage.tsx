@@ -59,8 +59,8 @@ export const ProductsPage: React.FC<{ product: ProductKey }> = ({ product }) => 
   return (
     <MarketingLayout>
       {/* Hero */}
-      <section className="relative overflow-hidden bg-gray-950 py-20">
-        <div className="absolute inset-0 bg-gradient-to-br from-violet-900/30 via-gray-950 to-indigo-900/20" />
+      <section className="relative overflow-hidden py-20">
+        <div className="absolute inset-0 bg-gradient-to-br from-violet-900/20 via-transparent to-indigo-900/20" />
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <BrandMark className="w-12 h-12 rounded-xl mx-auto mb-5" title={d.name} />
           <h1 className="text-4xl sm:text-5xl font-extrabold text-white mb-2">{d.name}</h1>
@@ -70,9 +70,9 @@ export const ProductsPage: React.FC<{ product: ProductKey }> = ({ product }) => 
       </section>
 
       {/* Features */}
-      <section className="bg-gray-900 py-16">
+      <section className="py-16">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <ul className="space-y-4">
+          <ul className="glass-card rounded-2xl p-8 sm:p-10 space-y-4">
             {d.points.map((pt) => (
               <li key={pt} className="flex gap-3 text-gray-200">
                 <Check className="w-5 h-5 text-violet-400 shrink-0 mt-0.5" />

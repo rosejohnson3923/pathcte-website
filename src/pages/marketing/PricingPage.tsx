@@ -48,8 +48,8 @@ const options = [
 export const PricingPage: React.FC = () => {
   return (
     <MarketingLayout>
-      <section className="relative overflow-hidden bg-gray-950 py-20">
-        <div className="absolute inset-0 bg-gradient-to-br from-violet-900/30 via-gray-950 to-indigo-900/20" />
+      <section className="relative overflow-hidden py-20">
+        <div className="absolute inset-0 bg-gradient-to-br from-violet-900/20 via-transparent to-indigo-900/20" />
         <div className="relative max-w-3xl mx-auto px-4 text-center">
           <h1 className="text-4xl sm:text-5xl font-extrabold text-white mb-5">Simple licensing</h1>
           <p className="text-lg text-gray-300">
@@ -59,12 +59,12 @@ export const PricingPage: React.FC = () => {
         </div>
       </section>
 
-      <section className="bg-gray-900 py-16">
+      <section className="py-16">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid gap-6 md:grid-cols-3 items-start">
           {options.map((o) => (
             <div
               key={o.name}
-              className={`rounded-2xl border bg-gray-950/60 p-7 flex flex-col ${o.featured ? 'border-violet-500 ring-1 ring-violet-500/40' : 'border-gray-800'}`}
+              className={`rounded-2xl glass-card p-7 flex flex-col ${o.featured ? 'border-violet-500/70 ring-1 ring-violet-500/40' : ''}`}
             >
               {o.featured && (
                 <span className="self-start mb-3 rounded-full bg-violet-500/20 px-3 py-1 text-xs font-semibold text-violet-200">

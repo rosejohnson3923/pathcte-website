@@ -99,8 +99,8 @@ export const SolutionsPage: React.FC<{ segment: Segment }> = ({ segment }) => {
   return (
     <MarketingLayout>
       {/* Hero */}
-      <section className="relative overflow-hidden bg-gray-950 py-20">
-        <div className="absolute inset-0 bg-gradient-to-br from-violet-900/30 via-gray-950 to-indigo-900/20" />
+      <section className="relative overflow-hidden py-20">
+        <div className="absolute inset-0 bg-gradient-to-br from-violet-900/20 via-transparent to-indigo-900/20" />
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <Icon className="w-10 h-10 text-violet-400 mx-auto mb-5" />
           <h1 className="text-4xl sm:text-5xl font-extrabold text-white mb-5">{d.title}</h1>
@@ -109,11 +109,12 @@ export const SolutionsPage: React.FC<{ segment: Segment }> = ({ segment }) => {
       </section>
 
       {/* Body — anchored sections (Districts) or a single point list */}
-      <section className="bg-gray-900 py-16">
+      <section className="py-16">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="glass-card rounded-2xl p-8 sm:p-10">
           {d.sections ? (
             d.sections.map((s, i) => (
-              <div key={s.id} id={s.id} className={`scroll-mt-24 ${i > 0 ? 'mt-12 border-t border-gray-800 pt-12' : ''}`}>
+              <div key={s.id} id={s.id} className={`scroll-mt-24 ${i > 0 ? 'mt-12 border-t border-white/10 pt-12' : ''}`}>
                 <h2 className="text-2xl font-bold text-white mb-5">{s.heading}</h2>
                 <PointList points={s.points} />
               </div>
@@ -121,7 +122,8 @@ export const SolutionsPage: React.FC<{ segment: Segment }> = ({ segment }) => {
           ) : (
             <PointList points={d.points!} />
           )}
-          <p className="mt-10 text-sm text-violet-300 border-t border-gray-800 pt-6">{d.fit}</p>
+          <p className="mt-10 text-sm text-violet-300 border-t border-white/10 pt-6">{d.fit}</p>
+          </div>
         </div>
       </section>
 

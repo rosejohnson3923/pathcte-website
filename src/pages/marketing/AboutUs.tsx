@@ -29,8 +29,8 @@ const values = [
 export const AboutUs: React.FC = () => {
   return (
     <MarketingLayout>
-      <section className="relative overflow-hidden bg-gray-950 py-20">
-        <div className="absolute inset-0 bg-gradient-to-br from-violet-900/30 via-gray-950 to-indigo-900/20" />
+      <section className="relative overflow-hidden py-20">
+        <div className="absolute inset-0 bg-gradient-to-br from-violet-900/20 via-transparent to-indigo-900/20" />
         <div className="relative max-w-3xl mx-auto px-4 text-center">
           <h1 className="text-4xl sm:text-5xl font-extrabold text-white mb-5">About PathCTE</h1>
           <p className="text-lg text-gray-300">
@@ -41,10 +41,10 @@ export const AboutUs: React.FC = () => {
         </div>
       </section>
 
-      <section className="bg-gray-900 py-16">
+      <section className="py-16">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid gap-6 md:grid-cols-3">
           {values.map((v) => (
-            <div key={v.title} className="rounded-xl border border-gray-800 bg-gray-950/60 p-7">
+            <div key={v.title} className="rounded-xl glass-card p-7">
               <v.icon className="w-8 h-8 text-violet-400 mb-4" />
               <h3 className="text-lg font-bold text-white mb-2">{v.title}</h3>
               <p className="text-gray-400 text-sm leading-relaxed">{v.body}</p>
@@ -53,7 +53,7 @@ export const AboutUs: React.FC = () => {
         </div>
       </section>
 
-      <section className="bg-gray-950 py-16 border-y border-gray-800/60">
+      <section className="py-16 border-y border-white/5">
         <div className="max-w-3xl mx-auto px-4 text-center">
           <h2 className="text-2xl font-bold text-white mb-4">One platform, one login</h2>
           <p className="text-gray-300">

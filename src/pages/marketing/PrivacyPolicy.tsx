@@ -4,7 +4,7 @@ import { MarketingLayout } from '../../components/marketing/MarketingLayout';
 export const PrivacyPolicy: React.FC = () => {
   return (
     <MarketingLayout>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="min-h-screen">
         {/* Header */}
         <section id="privacy-policy-top" className="pt-32 pb-12">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -18,7 +18,7 @@ export const PrivacyPolicy: React.FC = () => {
         {/* Privacy Policy Content */}
         <section className="pb-20">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 md:p-12 border border-white/20">
+            <div className="glass-card rounded-2xl p-8 md:p-12">
               
               {/* Introduction */}
               <div className="mb-12 p-6 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-xl border border-purple-400/20">

@@ -30,8 +30,8 @@ export const Contact: React.FC = () => {
 
   return (
     <MarketingLayout>
-      <section className="relative overflow-hidden bg-gray-950 py-20">
-        <div className="absolute inset-0 bg-gradient-to-br from-violet-900/30 via-gray-950 to-indigo-900/20" />
+      <section className="relative overflow-hidden py-20">
+        <div className="absolute inset-0 bg-gradient-to-br from-violet-900/20 via-transparent to-indigo-900/20" />
         <div className="relative max-w-3xl mx-auto px-4 text-center">
           <h1 className="text-4xl sm:text-5xl font-extrabold text-white mb-5">Talk to our team</h1>
           <p className="text-lg text-gray-300">
@@ -41,10 +41,10 @@ export const Contact: React.FC = () => {
         </div>
       </section>
 
-      <section className="bg-gray-900 py-16">
+      <section className="py-16">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 grid gap-10 md:grid-cols-5">
           {/* Form */}
-          <div className="md:col-span-3 rounded-2xl border border-gray-800 bg-gray-950/60 p-7">
+          <div className="md:col-span-3 rounded-2xl glass-card p-7">
             {sent ? (
               <div className="text-center py-10">
                 <Check className="w-10 h-10 text-violet-400 mx-auto mb-4" />
@@ -60,24 +60,24 @@ export const Contact: React.FC = () => {
                   <label className="block">
                     <span className="text-sm text-gray-300">Name</span>
                     <input name="name" required value={form.name} onChange={handleChange}
-                      className="mt-1 w-full rounded-lg border border-gray-700 bg-gray-900 px-3 py-2 text-white focus:border-violet-500 focus:outline-none" />
+                      className="mt-1 w-full rounded-lg border border-white/15 bg-white/5 px-3 py-2 text-white focus:border-violet-500 focus:outline-none" />
                   </label>
                   <label className="block">
                     <span className="text-sm text-gray-300">Work email</span>
                     <input type="email" name="email" required value={form.email} onChange={handleChange}
-                      className="mt-1 w-full rounded-lg border border-gray-700 bg-gray-900 px-3 py-2 text-white focus:border-violet-500 focus:outline-none" />
+                      className="mt-1 w-full rounded-lg border border-white/15 bg-white/5 px-3 py-2 text-white focus:border-violet-500 focus:outline-none" />
                   </label>
                 </div>
                 <div className="grid gap-4 sm:grid-cols-2">
                   <label className="block">
                     <span className="text-sm text-gray-300">Organization</span>
                     <input name="org" value={form.org} onChange={handleChange}
-                      className="mt-1 w-full rounded-lg border border-gray-700 bg-gray-900 px-3 py-2 text-white focus:border-violet-500 focus:outline-none" />
+                      className="mt-1 w-full rounded-lg border border-white/15 bg-white/5 px-3 py-2 text-white focus:border-violet-500 focus:outline-none" />
                   </label>
                   <label className="block">
                     <span className="text-sm text-gray-300">I'm with a…</span>
                     <select name="role" value={form.role} onChange={handleChange}
-                      className="mt-1 w-full rounded-lg border border-gray-700 bg-gray-900 px-3 py-2 text-white focus:border-violet-500 focus:outline-none">
+                      className="mt-1 w-full rounded-lg border border-white/15 bg-white/5 px-3 py-2 text-white focus:border-violet-500 focus:outline-none">
                       <option>District</option>
                       <option>Private school</option>
                       <option>Homeschool family</option>
@@ -88,7 +88,7 @@ export const Contact: React.FC = () => {
                 <label className="block">
                   <span className="text-sm text-gray-300">How can we help?</span>
                   <textarea name="message" rows={4} value={form.message} onChange={handleChange}
-                    className="mt-1 w-full rounded-lg border border-gray-700 bg-gray-900 px-3 py-2 text-white focus:border-violet-500 focus:outline-none" />
+                    className="mt-1 w-full rounded-lg border border-white/15 bg-white/5 px-3 py-2 text-white focus:border-violet-500 focus:outline-none" />
                 </label>
                 <button type="submit"
                   className="inline-flex items-center gap-2 rounded-lg bg-violet-600 px-6 py-3 font-semibold text-white hover:bg-violet-500 transition-colors">
@@ -100,17 +100,17 @@ export const Contact: React.FC = () => {
 
           {/* Aside */}
           <div className="md:col-span-2 space-y-6">
-            <div className="rounded-2xl border border-gray-800 bg-gray-950/60 p-7">
+            <div className="rounded-2xl glass-card p-7">
               <Mail className="w-7 h-7 text-violet-400 mb-3" />
               <h3 className="font-bold text-white mb-1">Prefer email?</h3>
               <a href={`mailto:${SALES_EMAIL}`} className="text-violet-300 hover:text-violet-200 text-sm">{SALES_EMAIL}</a>
             </div>
-            <div className="rounded-2xl border border-gray-800 bg-gray-950/60 p-7 text-sm text-gray-300 space-y-3">
+            <div className="rounded-2xl glass-card p-7 text-sm text-gray-300 space-y-3">
               <p className="font-semibold text-white">Already a subscriber?</p>
               <a href="https://app.pathfinity.ai/app/login" className="inline-flex items-center gap-2 text-violet-300 hover:text-violet-200">
                 Log in <ArrowRight className="w-4 h-4" />
               </a>
-              <p className="pt-3 border-t border-gray-800">
+              <p className="pt-3 border-t border-white/10">
                 Curious about the K-12 foundation?{' '}
                 <Link to="/pricing" className="text-violet-300 hover:text-violet-200">See licensing</Link>.
               </p>
